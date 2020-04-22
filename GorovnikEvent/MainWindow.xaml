@@ -8,11 +8,12 @@
         Title="MainWindow" Height="450" Width="800">
 	<DockPanel>
 		<StackPanel DockPanel.Dock="Top">
-			<TextBox Text="{Binding Unos, UpdateSourceTrigger=PropertyChanged}"/>
+			<TextBox Text="{Binding Unos}"/>
 			<Button Content="1" Click="dugme"/>
 			<Button Content="2" Click="dugme"/>
 			<CheckBox Unchecked="dugme"/>
 		</StackPanel>
+		<StackPanel>
 		<DataGrid Name="dg" AutoGenerateColumns="False">
 			<DataGrid.Columns>
 				<DataGridTextColumn Header="Ime" Binding="{Binding Ime}"/>
@@ -26,5 +27,11 @@
 				</DataGridTemplateColumn>
 			</DataGrid.Columns>
 		</DataGrid>
+		<DataGrid Name="dikta" ColumnWidth="*" IsReadOnly="True" AutoGenerateColumns="False">
+				<DataGrid.Columns>
+					<DataGridTextColumn Header="Tekst" Binding="{Binding .}"/>
+				</DataGrid.Columns>
+		</DataGrid>
+		</StackPanel>
 	</DockPanel>
 </Window>

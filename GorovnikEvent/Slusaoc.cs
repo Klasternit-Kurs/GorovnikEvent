@@ -29,5 +29,7 @@ namespace GorovnikEvent
 		public Slusaoc(string i) => Ime = i;
 
 		public event PropertyChangedEventHandler PropertyChanged;
+
+		public override string ToString() => "Moj ToString :)";
 	}
 }

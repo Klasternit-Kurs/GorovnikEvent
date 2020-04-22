@@ -39,6 +39,8 @@ namespace GorovnikEvent
 
 		public MainWindow()
 		{
+			g1.Ime = "Neki govornik";
+
 			InitializeComponent();
 			DataContext = this;
 			sls.Add(new Slusaoc("Pera"));
@@ -47,10 +49,11 @@ namespace GorovnikEvent
 			sls.Add(new Slusaoc("Pera"));
 			sls.Add(new Slusaoc("Pera"));
 			sls.Add(new Slusaoc("Pera"));
-
+			
 			dg.ItemsSource = sls;
-
+			dikta.ItemsSource = d.SveReceno;
 			g1.Govor += d.Snimi;
+			g1.Govor += d.SnimiUfajl;
 
 		}
 
